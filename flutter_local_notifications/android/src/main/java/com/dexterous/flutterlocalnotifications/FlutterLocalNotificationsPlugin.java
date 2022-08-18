@@ -413,7 +413,7 @@ public class FlutterLocalNotificationsPlugin
           notificationDetails.millisecondsSinceEpoch,
           pendingIntent);
     } else {
-      AlarmManagerCompat.set(
+      AlarmManagerCompat.setExact(
           alarmManager,
           AlarmManager.RTC_WAKEUP,
           notificationDetails.millisecondsSinceEpoch,
@@ -452,7 +452,7 @@ public class FlutterLocalNotificationsPlugin
       AlarmManagerCompat.setAndAllowWhileIdle(
           alarmManager, AlarmManager.RTC_WAKEUP, epochMilli, pendingIntent);
     } else {
-      AlarmManagerCompat.set(alarmManager, AlarmManager.RTC_WAKEUP, epochMilli, pendingIntent);
+      AlarmManagerCompat.setExact(alarmManager, AlarmManager.RTC_WAKEUP, epochMilli, pendingIntent);
     }
 
     if (updateScheduledNotificationsCache) {
