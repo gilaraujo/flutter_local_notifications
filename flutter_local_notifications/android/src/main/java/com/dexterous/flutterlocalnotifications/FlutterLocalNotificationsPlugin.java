@@ -817,7 +817,8 @@ public class FlutterLocalNotificationsPlugin
     }
 
     if (bigPictureStyleInformation.hideExpandedLargeIcon) {
-      bigPictureStyle.bigLargeIcon(null);
+      Bitmap n = null;
+      bigPictureStyle.bigLargeIcon(n);
     } else {
       if (bigPictureStyleInformation.largeIcon != null) {
         bigPictureStyle.bigLargeIcon(
